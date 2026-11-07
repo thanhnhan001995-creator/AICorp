@@ -1,5 +1,10 @@
 # Product Ideas — AI Corp
 
+- **Document ID:** `AIC-IDE-20261106-01`
+- **Created:** 2026-11-06 (Asia/Bangkok)
+- **Last updated:** 2026-11-06 (Asia/Bangkok)
+- **Brief referenced:** [`brief.md`](brief.md) — `AIC-BRF-20261105-01`
+
 ## 1. Tình trạng tài liệu
 
 - **Nguồn định hướng:** `brief.md` đã được CEO duyệt.
@@ -153,6 +158,26 @@ Thư ký không thay thế hàng đợi và không được tự che giấu sự
 - **Ràng buộc:** không tuyên bố hỗ trợ mọi provider từ đầu; mỗi connector chỉ được thêm khi có thể báo trạng thái/bằng chứng đáng tin.
 - **Vì sao phù hợp brief:** bản đầu cần nối agent thật, nhưng không bị buộc vào một model hoặc một nhà cung cấp.
 
+> **Ghi chú lựa chọn kiến trúc bổ sung (CEO duyệt ngày 2026-11-06):** AI Corp dùng **Tauri + React/TypeScript + Rust + SQLite**. React/TypeScript là lớp điều hành và trực quan; Rust/Tauri là lớp domain, kiểm tra Hộp uỷ quyền, connector runtime và truy cập local; SQLite là nguồn dữ liệu local-first. Đây là quyết định triển khai cho các idea hiện có, không tạo một idea hoặc phiên bản Ideas mới.
+
+### I-11 — Kinh nghiệm cá nhân có nguồn của Nhân viên AI
+
+> **Ghi chú bổ sung:** CEO bổ sung idea này sau vòng duyệt idea ban đầu. Đây là phần bị sót khi duyệt, được thêm vào cùng định hướng hiện tại; không tạo một phiên bản Ideas mới.
+
+**Ý tưởng:** Mỗi nhân viên AI có một lịch sử kinh nghiệm riêng, bền vững qua các công việc. Đây là lớp trí nhớ vận hành cá nhân: điều từng làm, bài học rút ra, quy ước đã học, lỗi từng gặp, kỹ năng đã được chứng minh và bối cảnh cần nhớ cho công việc sau.
+
+Kinh nghiệm cá nhân **không phải** Sổ cái điều hành:
+
+- Ledger là lịch sử bất biến của những gì đã xảy ra trong tổ chức.
+- Kinh nghiệm là bản diễn giải có phạm vi của một nhân viên về những bài học nên áp dụng; mỗi mục phải liên kết về báo cáo, artifact hoặc sự kiện ledger làm nguồn.
+- Một kinh nghiệm có thể bị đính chính, thay thế hoặc vô hiệu hoá bằng bản ghi mới, nhưng không được sửa đè lịch sử nguồn trong ledger.
+
+Mỗi kinh nghiệm cần có bài học, phạm vi áp dụng, nguồn bằng chứng, thời điểm, trạng thái hiệu lực và ai/điều gì đã tạo hoặc xác nhận nó. CEO có thể xem, yêu cầu đính chính hoặc vô hiệu hoá kinh nghiệm. Khi nhận một công việc mới, agent chỉ nhận các kinh nghiệm liên quan; hệ thống không xem toàn bộ lịch sử dài là ngữ cảnh mặc định.
+
+**Giới hạn bản đầu:** chưa tự chấm điểm năng lực, chưa tự tăng quyền, chưa tạo bộ nhớ vô hạn và chưa để agent tự khẳng định một bài học là đúng nếu thiếu nguồn. Kinh nghiệm hỗ trợ quyết định và thực hiện, không thay thế Hộp uỷ quyền hoặc bằng chứng.
+
+**Vì sao phù hợp brief:** nhân viên có thể tích luỹ giá trị lâu dài mà CEO vẫn kiểm tra được nguồn gốc, giữ quyền kiểm soát và tránh lẫn bài học chủ quan với sự thật vận hành.
+
 ## 5. Những idea chưa nên là trọng tâm
 
 Các ý tưởng sau có thể hữu ích về sau, nhưng chưa phù hợp để dẫn dắt định hướng đầu tiên vì không trực tiếp hoàn tất vòng điều hành trong brief:
@@ -173,7 +198,7 @@ Chúng chỉ đáng xem lại sau khi AI Corp chứng minh được: một agent
 | Tầng | Các idea | Vai trò |
 | --- | --- | --- |
 | **Điều hành** | I-01 Command Desk, I-04 Công việc như hợp đồng, I-09 CEO Attention | Cho CEO thấy và quyết định việc quan trọng. |
-| **Tin cậy & trách nhiệm** | I-02 Hồ sơ nhân viên, I-03 Hộp uỷ quyền, I-05 Báo cáo, I-06 Ledger, I-07 Cây công việc phụ | Biến hành động agent thành thứ có thể hiểu, kiểm tra và can thiệp. |
+| **Tin cậy & trách nhiệm** | I-02 Hồ sơ nhân viên, I-03 Hộp uỷ quyền, I-05 Báo cáo, I-06 Ledger, I-07 Cây công việc phụ, I-11 Kinh nghiệm cá nhân | Biến hành động agent thành thứ có thể hiểu, kiểm tra và can thiệp. |
 | **Bản sắc & kết nối** | I-08 Văn phòng ảo, I-10 Lớp kết nối agent thật | Tạo trải nghiệm AI Corp riêng và bảo đảm đây là hệ thống vận hành thực. |
 
 Không tầng nào thay thế tầng khác: văn phòng đẹp không bù được thiếu báo cáo; kết nối agent thật không bù được thiếu uỷ quyền; ledger đầy đủ không bù được thiếu khả năng CEO ra quyết định nhanh.
@@ -188,5 +213,7 @@ CEO đã duyệt các định hướng sau để làm cơ sở cho giai đoạn 
 4. **Sổ cái điều hành:** tự động ghi, bất biến và append-only; mọi sai sót phải được hiệu chỉnh bằng đính chính mới, không sửa đè.
 5. **Văn phòng ảo:** phải có ý tưởng nghiêm túc cho văn phòng đơn tầng và đa tầng; đa chi nhánh với Branch Director là hướng phát triển sau.
 6. **CEO Attention:** tiếp tục là lựa chọn mặc định; Thư ký AI là lớp phát triển sau để phân loại khẩn cấp và liên hệ CEO qua kênh riêng, dưới quyền giám sát đầy đủ của CEO.
+7. **Kinh nghiệm nhân viên:** mỗi nhân viên có lịch sử kinh nghiệm riêng, có nguồn, độc lập với ledger và được bổ sung vào cùng định hướng hiện tại sau vòng duyệt idea ban đầu.
+8. **Kiến trúc triển khai:** Tauri + React/TypeScript + Rust + SQLite là lựa chọn CEO đã duyệt; lớp UI không tự chạy lệnh, truy cập bí mật hoặc ghi trực tiếp vào nguồn dữ liệu điều hành.
 
-Các idea trong tài liệu hiện đã đủ định hướng để chuyển sang giai đoạn xác định Job. Khi đó, từng job phải dẫn về ít nhất một idea mã I-01 đến I-10 và một nhu cầu cụ thể trong `brief.md`.
+Các idea trong tài liệu hiện đã đủ định hướng để chuyển sang giai đoạn xác định Job. Khi đó, từng job phải dẫn về ít nhất một idea mã I-01 đến I-11 và một nhu cầu cụ thể trong `brief.md`.

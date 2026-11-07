@@ -1,5 +1,9 @@
 # Product Brief — AI Corp
 
+- **Document ID:** `AIC-BRF-20261105-01`
+- **Created:** 2026-11-05 (Asia/Bangkok)
+- **Last updated:** 2026-11-06 (Asia/Bangkok)
+
 ## 1. Tình trạng tài liệu
 
 - **Tên sản phẩm tạm thời:** AI Corp
